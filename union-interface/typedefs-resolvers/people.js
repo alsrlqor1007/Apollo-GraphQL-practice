@@ -1,6 +1,7 @@
 const { gql } = require('apollo-server')
 const dbWorks = require('../dbWorks.js')
 
+// union과 interface를 사용하는 people 선언
 const typeDefs = gql`
     type People {
         id: ID!
@@ -16,11 +17,13 @@ const typeDefs = gql`
         givens: [Given]
     }
 `
+
 const resolvers = {
     Query: {
         people: (parent, args) => dbWorks.getPeople(args),
     }
 }
+
 module.exports = {
     typeDefs: typeDefs,
     resolvers: resolvers
