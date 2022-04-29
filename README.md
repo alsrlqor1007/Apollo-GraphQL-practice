@@ -13,3 +13,7 @@ npm install convert-csv-to-json
 ```bash
 npm install graphql apollo-server
 ```
+
+```bash
+npm install @apollo/client graphql
+```
